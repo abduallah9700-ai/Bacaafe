@@ -1,0 +1,261 @@
+/* ===================================
+   About Page Styles
+   =================================== */
+
+.about-page {
+  padding-top: 8rem;
+}
+
+/* --- Hero --- */
+.about-hero {
+  padding: 5rem 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-style: italic;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  max-width: 40rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --- Editorial Platter --- */
+.about-editorial {
+  padding: 0 3rem 6rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.about-editorial-inner {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.editorial-image-wrap {
+  position: relative;
+}
+
+.editorial-image {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.est-badge {
+  position: absolute;
+  bottom: -3rem;
+  right: -3rem;
+  width: 16rem;
+  height: 16rem;
+  background: var(--surface-container-lowest);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-float);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.est-label {
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.est-year {
+  font-style: italic;
+  font-size: 3.75rem;
+  color: var(--primary);
+}
+
+.editorial-text-card {
+  padding: 2rem 3rem;
+  background: var(--surface-container-low);
+  border-radius: var(--radius-md);
+}
+
+.editorial-text-card h2 {
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.editorial-text-card p {
+  font-size: 1.125rem;
+  color: var(--secondary);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Values --- */
+.about-values {
+  background: var(--surface-container);
+  padding: 6rem 3rem;
+  margin: 5rem 0;
+}
+
+.values-grid {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.value-card {
+  text-align: center;
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--on-primary-container);
+}
+
+.value-card h3 {
+  font-style: italic;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+/* --- Banner CTA --- */
+.about-banner {
+  padding: 8rem 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.banner-wrapper {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+.banner-content h2 {
+  font-style: italic;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: #fff;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+
+.banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-float);
+}
+
+.banner-btn:hover {
+  transform: scale(1.05);
+}
+
+.banner-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .about-editorial-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .est-badge {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: baseline;
+    margin-top: 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 6rem;
+  }
+
+  .about-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-editorial {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .about-values {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-banner {
+    padding: 4rem 1.5rem;
+  }
+
+  .banner-wrapper {
+    height: 400px;
+  }
+}
